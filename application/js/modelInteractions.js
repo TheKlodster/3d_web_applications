@@ -1,5 +1,3 @@
-//adapted from example code 'benskitchen.com'
-
 function cokeScene(){
     nSwitch = 0;
     document.getElementById('SceneSwitch').setAttribute('whichChoice', nSwitch);
@@ -20,21 +18,21 @@ var spinning = false;
 function spin()
 {
 	spinning = !spinning;
-	document.getElementById('model__RotationTimer').setAttribute('enabled', spinning.toString());
+	document.getElementById('model__Rotate-TIMER').setAttribute('enabled', spinning.toString());
 }
 
 function stopRotation()
 {
 	spinning = false;
-	document.getElementById('model__RotationTimer').setAttribute('enabled', spinning.toString());
+	document.getElementById('model__Rotate-TIMER').setAttribute('enabled', spinning.toString());
 }
 
 function animateModel()
 {
-    if(document.getElementById('model__RotationTimer').getAttribute('enabled')!= 'true')
-        document.getElementById('model__RotationTimer').setAttribute('enabled', 'true');
+    if(document.getElementById('model__Rotate-TIMER').getAttribute('enabled')!= 'true')
+        document.getElementById('model__Rotate-TIMER').setAttribute('enabled', 'true');
     else
-        document.getElementById('model__RotationTimer').setAttribute('enabled', 'false');
+        document.getElementById('model__Rotate-TIMER').setAttribute('enabled', 'false');
 }
 
 function wireFrame()
@@ -67,32 +65,17 @@ function targetLight()
 	console.log(lightOn);
 }
 
+function cameraSky()
+{
+	document.getElementById('model__Camera003').setAttribute('bind', 'true');
+}
+
 function cameraFront()
 {
-	document.getElementById('model__CameraFront').setAttribute('bind', 'true');
+	document.getElementById('model__Camera002').setAttribute('bind', 'true');
 }
 
 function cameraBack()
 {
-	document.getElementById('model__CameraBack').setAttribute('bind', 'true');
-}
-
-function cameraLeft()
-{
-	document.getElementById('model__CameraLeft').setAttribute('bind', 'true');
-}
-
-function cameraRight()
-{
-	document.getElementById('model__CameraRight').setAttribute('bind', 'true');
-}
-
-function cameraTop()
-{
-	document.getElementById('model__CameraTop').setAttribute('bind', 'true');
-}
-
-function cameraBottom()
-{
-	document.getElementById('model__CameraBottom').setAttribute('bind', 'true');
+	document.getElementById('model__Camera001').setAttribute('bind', 'true');
 }

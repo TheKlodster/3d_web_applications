@@ -29,7 +29,7 @@
       
             <!-- Brand -->
             <div class="logo">
-              <a class="navbar-brand" href="#">
+              <a id="navLogo" class="navbar-brand nav-link active" href="#">
                 <h1>1oca</h1>
                 <h2>Cola</h2>
                 <h3>Journey</h3>
@@ -131,10 +131,11 @@
           </div>  <!-- End home page contents-->
 
           <div id="about" style="display:none;">
-              Web 3D Applications is a 3rd year module I took part in. This webpage is an attempt to show off my skills and what I have learnt throughout my time in this module. </br> </br>
+          Web 3D Applications is a 3rd year module I took part in. This webpage is an attempt to show off my skills and what I have learnt throughout my time in this module. </br> </br>
 
-              On the models page you will find my 3ds Max rendered models from the three following drinks: Coca Cola, Sprite and Dr Pepper. All rendered in either the shape
-              of a can, a bottle and a cup. Although I am unsure why the camera angle for the Dr Pepper cup is zoomed out so far.
+          On the models page you will find my 3ds Max rendered models from the three following drinks: Coca Cola, Sprite and Dr Pepper. All rendered in either the shape of a can, a bottle and a cup. </br> </br>
+
+          All models rotate as well as have functional camera options to view from different angles.
           </div>  
 
           <!-- This is the content for X3D models and 3D Image   -->
@@ -220,12 +221,9 @@
                           <li class="nav-item dropdown">
                               <a class="nav-link active dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Cameras</a>
                               <div class="dropdown-menu">
+                              <a class="dropdown-item" href="#" onclick="cameraSky();">Default</a>
                                 <a class="dropdown-item" href="#" onclick="cameraFront();">Front</a>
                                 <a class="dropdown-item" href="#" onclick="cameraBack();">Back</a>
-                                <a class="dropdown-item" href="#" onclick="cameraLeft();">Left</a>
-                                <a class="dropdown-item" href="#" onclick="cameraRight();">Right</a>
-                                <a class="dropdown-item" href="#" onclick="cameraTop();">Top</a>
-                                <a class="dropdown-item" href="#" onclick="cameraBottom();">Bottom</a>
                               </div>
                             </li>
                           </ul>
@@ -234,13 +232,11 @@
                           <div class="card-Title x3dCamera_Subtitle drinksText">
                             <h3>Camera Views</h3>
                           </div>                            
-                          <a href="#" class="btn btn-success btn-responsive" onclick="cameraFront();">Default</a>
-                          <a href="#" class="btn btn-primary btn-responsive" onclick="cameraBack();">Back</a>
-                          <a href="#" class="btn btn-secondary btn-responsive" onclick="cameraLeft();">Left</a>
-                          <a href="#" class="btn btn-secondary btn-responsive" onclick="cameraRight();">Right</a>
-                          <a href="#" class="btn btn-outline-dark disabled btn-responsive">Off</a>
+                          <a href="#" class="btn btn-success btn-responsive" onclick="cameraSky();">Default</a>
+                          <a href="#" class="btn btn-primary btn-responsive" onclick="cameraFront();">Front</a>
+                          <a href="#" class="btn btn-secondary btn-responsive" onclick="cameraBack();">Back</a>
                           <div class="card-text x3dCameraDescription drinksText">
-                            <p>These buttons select a limited range of X3D model viewpoints, use the dropdown menu for more camera views</p>
+                            <p>These buttons select a limited range of X3D model viewpoints.</p>
                           </div>
                         </div>
                       </div>
@@ -259,12 +255,10 @@
                           <div class="card-Title x3dAnimationSubtitle drinksText">
                             <h3>Animation Options</h3>
                           </div>
-                          <a href="#" class="btn btn-outline-light btn-responsive" onclick="spin();">RotX</a>
-                          <a href="#" class="btn btn-outline-light btn-responsive">RotY</a>
-                          <a href="#" class="btn btn-outline-light btn-responsive">RotZ</a>
+                          <a href="#" class="btn btn-outline-light btn-responsive" onclick="spin();">Rotate X</a>
                           <a href="#" class="btn btn-outline-dark btn-responsive" onclick="stopRotation();">Stop</a>
                           <div class="card-text x3dAnimationDescription drinksText">
-                              <p>These buttons select a range of X3D animation options</p>
+                              <p>These provides the rotation control for X3D animation options.</p>
                           </div>
                         </div>
                       </div>

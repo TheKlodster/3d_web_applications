@@ -16,6 +16,15 @@ function selectPage() {
 	$('#spriteDescription').hide(); 
 	$('#pepperDescription').hide(); 
 
+	$('#navLogo').click(function(){
+		$('#home').show();
+		$('#about').hide();
+		$('#models').hide();
+		$('#interaction').hide();
+		$('#cokeDescription').hide();
+		$('#spriteDescription').hide(); 
+		$('#pepperDescription').hide(); 	  
+	});
 
 	$('#navHome').click(function(){
 		$('#home').show();
